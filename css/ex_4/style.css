@@ -1,9 +1,0 @@
-* {
-    color: green;
-  }
-  #login { 
-      color: gray; 
-    }
-    .red{ color: red; }
-    label,  input { color:pink; }
-    div[name="submit"] { color: brown; }
