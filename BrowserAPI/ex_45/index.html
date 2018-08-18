@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+      window.onload = function getInput() {
+      const form = document.querySelector('form');
+form.onsubmit = function() {
+    const formElements = form.elements;
+console.log(formElements)
+const username = form.elements[0].value;
+console.log(username.value);	
+const pass = form.elements[1].value;
+console.log(pass.value);
+}
+form.onsubmit = function(event) {
+  event.preventDefault();
+}
+  form.addEventHandler('submit', function(event) {
+  event.preventDefault();
+});
+}
+</script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>
