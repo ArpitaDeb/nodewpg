@@ -1,0 +1,57 @@
+<style>
+body {
+    font-family: Arial;
+    font-size: 16px; 
+    text-decoration-color: black;
+  } 
+h1 {
+    font-size: 2em; 
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px #666;
+    color:#ddd;
+}
+h2 {
+    font-size: 1.5em; 
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px #666;
+    color:#ddd; 
+}
+h1,h2 {
+    font-size: 1.5em; 
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px #666;
+    text-decoration-color:#ddd; 
+}
+p {
+line-height: 1.4em;
+text-indent: 0.8em;
+}
+div#main {
+        text-align: justify; 
+    }
+.bold {
+        font-weight: bold;
+      color: coral;
+    }
+div#quote {
+    letter-spacing: 2px;
+    font-style: italic; 
+    color: darkcyan;
+}
+.last {
+    text-align: right;
+    color: red;
+}  
+.wrong {
+    line-height: 1.2em;
+    font-weight: 700;
+    text-decoration-line: line-through;
+    text-decoration-color: black;
+
+}  
+.google{
+    font-family: Merriweather;
+    font-size: 1.6em; 
+    color: purple;
+  }      
+</style>

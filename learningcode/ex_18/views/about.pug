@@ -1,0 +1,10 @@
+extends ./layout.pug
+block scripts
+
+block content 
+- const myText = "Some Text"
+if myText.length > 10
+  p It's long enough
+  else
+  p not long enough
+block foot
