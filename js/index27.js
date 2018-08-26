@@ -1,0 +1,14 @@
+const firstNumber = 20;
+const secondNumber = 15;
+let add = firstNumber + secondNumber;
+let template1 = `I add ${firstNumber} + ${secondNumber} and the result is ${add}`;
+console.log(template1);
+let subtract = firstNumber - secondNumber;
+let template2 = `I subtract ${firstNumber} - ${secondNumber} and the result is ${subtract}`;
+console.log(template2);
+let multiplication = firstNumber * secondNumber;
+let template3 = `I add ${firstNumber} * ${secondNumber} and the result is ${multiplication}`;
+console.log(template3);
+let division = firstNumber / secondNumber;
+let template4 = `I add ${firstNumber} / ${secondNumber} and the result is ${division4}`;
+console.log(template4);

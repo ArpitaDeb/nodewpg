@@ -1,0 +1,13 @@
+body {
+    Background-color: #eee;
+}
+
+img {
+    Border: 1px solid black;
+    Margin: 0, 20px, 20px, 20px;
+    Cursor: pointer; 
+    Border-radius: 10px;
+}
+.hover img {
+    Box-shadow: 2px 2px 16px 1px rgba(0,0,0,0.75);
+}

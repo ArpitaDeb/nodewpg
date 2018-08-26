@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:compile": "node-sass --include-path sass INPUT_FILE.scss OUTPUT_FILE.css",
     "start": "node index.js"
   },
   "keywords": [],
