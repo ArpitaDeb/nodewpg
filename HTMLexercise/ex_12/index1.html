@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create User</title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+        <label for="username">USERNAME</label>
+        <input type="text" name="username" placeholder="username" size="30" maxlength="12">
+        <label for="password">PASSWORD</label>
+        <input type="text" name="password" placeholder="password" size="30" maxlength="8">
+        </fieldset>
+        <br>
+        <div>
+        <label for="radio">Select your Favorite Superhero:</label> <br>
+        <input type="radio" name="SUPERHEROES" value="Superman"> Superman <br>
+        <input type="radio" name="SUPERHEROES" value="Batman" add checked="Batman"> Batman <br>
+        <input type="radio" name="SUPERHEROES" value="Wonder Woman"> Wonder Woman <br>
+        <input type="radio" name="SUPERHEROES" value="Flash"> Flash <br>
+        <input type="radio" name="SUPERHEROES" value="Thor"> Thor <br>
+        <input type="radio" name="SUPERHEROES" value="Hulk"> Hulk <br>
+        </div>
+        <br>
+        <div>
+        <label for="checkbox">Select your Favorite Videogame:</label><br>
+        <input type="checkbox" name="VIDEOGAMES" value="Fifa" checked="Fifa"> Fifa<br>
+        <input type="checkbox" name="VIDEOGAMES" value="NHL"> NHL <br>
+        <input type="checkbox" name="VIDEOGAMES" value="Resident Evil"> Resident Evil <br>
+        <input type="checkbox" name="VIDEOGAMES" value="Uncharted"> Uncharted <br>
+        <input type="hidden" name="userid" value="2300">       
+        </div>
+        <br>
+        <input type="image" alt="login" src="img/register_button.png" height="500" width="1000">
+        </form> 
+    </body>
+</html>

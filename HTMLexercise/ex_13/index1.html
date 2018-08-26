@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create User</title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <br>
+            <form action=<form action="index.html" method="get" enctype="application/x-www-form-urlencoded"></form>
+                <label for="name">NAME</label>
+                    <input type="text" name="name" placeholder="name">
+            </form>
+        <br>
+        <br>
+            <form>
+                <label for="Options">OPTIONS</label>
+                <select name= "Options">
+                    <option value="deadpool">Deadpool</option>
+                    <option value="batman_vs_superman">Batman v Superman</option>
+                    <option value="civil_war">Captain America: Civil War</option>
+                    <option value="wonder_woman" selected="selected">Wonder Woman</option>
+                </select>
+            </form>
+        <br>
+        <br>
+            <form>
+                <textarea name="about" placeholder="Tell us about yourself" cols="100" rows="5"></textarea>
+            </form>
+        <br>
+        <br>
+            <form>
+                <form action="upload.php" method="POST" enctype="multipart/form-data">Upload Avatar Image</form>
+                    <input type="file" name="Avatar">
+            </form>
+        <br>
+        <br>
+            <form>
+                <button value="create" name="Clear Form">Clear Form</button>
+            </form>
+        <br>
+            <form>
+                <button value="create" name="Add New User">Add New User</button>
+            </form>
+    </body>
+</html>
