@@ -1,0 +1,33 @@
+extends ./layout.pug
+block styles
+    link(href='css/style1.css' type='text/css' rel='stylesheet')
+block content
+    h2 Login Form
+        form(action="login.html" method="post" enctype="application/x-www-form-urlencoded" )
+            .imgcontainer
+                img.avatar(src='img/loginimg.jpg' alt='healthyfoodimage')
+            .container
+                label(for='firstname')
+                     b Firstname
+                        input(type='text' placeholder='Enter firstname' name='firstname' required='')
+                label(for='lastname')
+                     b Lastname
+                        input(type='text' placeholder='Enter lastname' name='lastname' required='')
+                label(for='username')
+                     b Username
+                        input(type='text' placeholder='Enter Username' name='username' required='')
+                label(for='password')
+                    b Password
+                        input(type='password' placeholder='Enter Password' name='passsword' required='')
+                label(for='email')
+                    b Email
+                        input(type='email' placeholder='Enter Email ID' name='email' required='')
+                button(type='submit') Login
+                label
+                        input(type='checkbox' checked='checked' name='remember')
+                |  Remember me
+            .container(style='background-color:#f1f1f1')
+                 button.cancelbtn(type='button') Cancel
+                 span.psw
+                 | Forgot 
+                 a(href='#') password?
