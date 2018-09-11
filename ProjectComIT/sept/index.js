@@ -14,17 +14,7 @@ app.get('/', (req, res) => {
   });
   const MongoClient = require('mongodb').MongoClient;
   const url = 'mongodb://localhost:27017';
-  app.get('/', (req, res) => {
-	MongoClient.connect(url, function(err, client) {
-		const db = client.db('');
-		const collection = db.collection('');
-
-		collection.find({}).toArray((error, documents) => {
-			client.close();
-			res.render('index', { documents: documents });
-		});
-	});
-});
+  
   const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
  app.post('/login.html', urlencodedParser, (req, res) => {
@@ -33,14 +23,16 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
     const lastname = req.body.lastname;
     const password = req.body.password;
     const email = req.body.email;   
-    
-    console.log(req.body);
-    collection.insertMany(documents, (err, result) => {
-        callback(result);
-    });
-    res.send(`We got the following values from the query string: ${username}, ${firstname}, ${lastname}, ${password} & ${email}`);
-  });
-  
-
+   
+      MongoClient.connect(url, function(err, client) {
+        const db = client.db('');
+        const collection = db.collection('documents');
+        console.log(req.body);
+        const documents = { "username": username, "firstname": firstname, "lastname": lastname, "email": email };
+    collection.insertOne(documents, (err, result) => {
+      res.send(`We got the following values from the query string: ${username}, ${firstname}, ${lastname} & ${email}`);
+        }); 
+      });
+    }); 
 app.use(express.static('public'));
 app.listen(3000);

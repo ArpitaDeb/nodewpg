@@ -20,11 +20,11 @@ window.onload = function getInput() {
     }
 
     form.onsubmit = function (event) {
-        event.preventDefault();
+       
 
-        const username = form.elements[0];
-        const password = form.elements[1]
-        const mail = form.elements[2];
+        const username = form.elements[2];
+        const password = form.elements[3]
+        const mail = form.elements[4];
 
         if (!validateUser(username.value)) {
             console.log('Incorrect username');
