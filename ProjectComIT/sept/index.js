@@ -22,15 +22,16 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
     const password = req.body.password;
-    const email = req.body.email;   
+    const email = req.body.email;
+    const subject= req.body.subject;  
    
       MongoClient.connect(url, function(err, client) {
         const db = client.db('');
         const collection = db.collection('documents');
         console.log(req.body);
-        const documents = { "username": username, "firstname": firstname, "lastname": lastname, "email": email };
+        const documents = { "username": username, "firstname": firstname, "lastname": lastname, "email": email, "subject": subject};
     collection.insertOne(documents, (err, result) => {
-      res.send(`We got the following values from the query string: ${username}, ${firstname}, ${lastname} & ${email}`);
+      res.send(`We received the following details from your reservation request: ${firstname}, ${lastname}, ${email}, ${subject} & ${username}`);
         }); 
       });
     }); 

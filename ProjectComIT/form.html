@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style1.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<h2>Login Form</h2>
+<form action="/action_page.php">
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="mail"><b>Email</b></label>
+    <input type="Email" placeholder="Enter Email ID" name="mail" required>
+    
+    <label for="subject"><b>Subject</b></label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <fieldset>
+      <legend>Booking Details:</legend>
+      <label for="date"><b>Booking date & time: </b></label>
+    <input id="date" type="date" placeholder="Enter date & time" name="mail" min="2018-09-12" required>
+    <select id="time" name="duration">
+      <option value="australia">1hour</option>
+      <option value="canada">2hour</option>
+      <option value="usa">more than 2hour</option>
+    </select>
+    <input id="numberOfGuests" type="number" name="numberOfGuests" required>   
+    </fieldset>
+    </div>       
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</body>
+</html>

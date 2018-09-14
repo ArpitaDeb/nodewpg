@@ -12,6 +12,7 @@ MongoClient.connect(url, function(err, client) {
 	const collection = db.collection('superheroes');
 
 	collection.find({}).toArray((error, documents) => {
+		
 		console.log(documents);
         client.close();
     })

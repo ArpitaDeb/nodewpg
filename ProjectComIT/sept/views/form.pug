@@ -21,7 +21,27 @@ block content
                         input(type='password' placeholder='Enter Password' name='passsword' required='')
                 label(for='email')
                     b Email
-                        input(type='email' placeholder='Enter Email ID' name='email' required='')            
+                        input(type='email' placeholder='Enter Email ID' name='email' required='')
+                    .col-25
+                label(for='subject')
+                    b Subject
+                    .col-75
+                    textarea#subject(name='subject' placeholder='Write something' style='height:200px')
+                fieldset
+                legend Booking Details:
+                label(for='date')
+                b Booking date: 
+                    input#date(type='date' placeholder='Enter date' name='mail' min='2018-09-12' required='')
+                label(for='time')
+                b Booking duration: 
+                select#duration(name='duration')
+                    option(value='1hour') 1hour
+                    option(value='2hour') 2hour
+                    option(value='more than 2hour') more than 2hour   
+                
+                label(for='guests') 
+                b Guests:   
+                    input#numberOfGuests(type='number' name='numberOfGuests' required='')                  
                 button(type='submit') Login
                 label
                         input(type='checkbox' checked='checked' name='remember')
