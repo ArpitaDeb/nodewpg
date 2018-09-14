@@ -1,4 +1,3 @@
-
 eventListeners();
 function eventListeners(){
     const ui = new UI()
@@ -67,7 +66,7 @@ UI.prototype.videoControls=function(){
     }
     UI.prototype.checkEmpty = function (name, lastname, email) {
         let result;
-        if(name==''||lastname===''||email===''){
+        if(name===''||lastname===''||email===''){
             result=false;
         }
         else{
@@ -76,9 +75,8 @@ UI.prototype.videoControls=function(){
         return result;    
     }
     UI.prototype.showFeedback = function(text,type){
-        const feedback= document.querySelector('.drink-form_feedback');
-        if(type==='success'){
-            
+    let feedback= document.querySelector('.drink-form_feedback');
+        if(type==='success'){            
             feedback.classList.add('success');
             feedback.innerText = text;
             this.removeAlert('success');
@@ -97,14 +95,14 @@ UI.prototype.videoControls=function(){
 }
 UI.prototype.addCustomer = function (customer) {
     const images = [1, 2, 3, 4, 5];
-    let random= Math.floor(Math.reandom()* images.length);
+    let random= Math.floor(Math.random()* images.length);
     const div= document.createElement('div');
     div.classList.add('person');
     div.innerHTML = `<img src="img/person-${random}.jpeg" alt="person"
     class="person_thumbnail">
                 <h4 class="person_name">${customer.name}</h4>
                 <h4 class="person_last-name">${customer.lastname}</h4>`
-                document.querySelector('.drink-card_list').appendChild(div)
+    document.querySelector('.drink-card_list').appendChild(div)
     console.log(random)
 
 }
@@ -115,6 +113,7 @@ UI.prototype.clearFields = function(){
     
 }
 UI.prototype.showModal = function(event){
+    event.preventDefault();
     if(event.target.parentElement.classList.contains('work-item_icon'));
     let id=event.target.parentElement.dataset.id
     

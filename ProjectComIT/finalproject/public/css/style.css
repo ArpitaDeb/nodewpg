@@ -18,12 +18,12 @@ font-family: 'Open Sans', sans-serif;
 background: linear-gradient(rgba(255, 255, 255, 0.85),(rgba(255, 255, 255, 0.85)),url('../img/bodyBcg.jpeg'));
 color: var(--black); 
 }
-
+/*global*/
 .bell-fonts{
     font-family: 'La Belle Aurore', cursive;
 }
 .section-padding{
-    padding: 3rem 0;
+    padding: 8rem 0;
 }
 .grid-container{
     max-width: 90vw;
@@ -39,10 +39,7 @@ color: var(--black);
     }
     .grid-container{
         max-width: 75vw;
-           }
-/*margin: 2rem auto;
-           display: grid;
-           grid-row-gap: 2rem;*/
+    }
 }
 .section-title{
     padding: 1rem 0.5rem;
@@ -50,6 +47,7 @@ color: var(--black);
 .section-title_name{
     font-size: 3rem;
     text-transform: capitalize;
+    text-align: justify-all;
 }
 .section-title_underline{
     background: var(--yellow);
@@ -61,6 +59,7 @@ color: var(--black);
     line-height: 1.5;
     margin-top: 1rem;
     color: var(--grey);
+    display: inline-block;
 }
 
 .header{
@@ -155,7 +154,7 @@ color: var(--black);
     top:0;
     left:0;
     height: 100%;
-    width: 10rem;
+    /*width: 10rem;*/
     background: rgba(242,180,80,0.9);
     z-index:3;
 }
@@ -178,6 +177,11 @@ color: var(--black);
 }
 .nav_logo:hover{
     background: var(-grey);
+}
+.nav{
+    width: 10rem;
+    overflow: hidden;
+    transition: 0.5s linear;
 }
 .nav--show{
     width: 10rem;
@@ -238,6 +242,89 @@ color: var(--black);
     grid-template-rows: 1fr 1fr;
 }
 }
+.drink{
+    background: var(--brown);
+    color: var(--brightyell);
+    text-transform: capitalize;
+    }
+.drink-form,.drink-card{
+    text-align: center;
+    display:grid;
+    grid-template-columns:70%;
+    justify-content: center;
+    grid-row-gap: 1.25rem;
+}   
+.drink-form_feedback{
+    border:0.1rem solid var(--brightYellow);
+    color: var(--brightyellow);
+    padding: 0.25rem;
+    display: none;
+} 
+.error{
+    display: block;
+    color: red;
+    border-color: red;
+}    
+.success{
+    display: block;
+    color:green;
+    border-color: green;
+}
+.drink-form_title,.drink-card_title{
+    font-size: 3rem;
+    color: var(--brightyellow);
+}
+.input-name,.input-lastname,.input-email{
+    width:100%;
+}
+.input-name,.input-lastname,.input-email,.input-submit{
+    font-size: 1rem;
+    border-radius:0.5rem;
+    padding:0.25rem 0.5rem;
+    background:rgba(111,87,77,0.6);
+    color:var(--darkBrown);
+    border:none;
+    outline:none;
+}
+.input-name::placeholder,.input-lastname::placeholder,.input-email::placeholder{
+    color:var(--darkBrown);
+    text-transform: capitalize;
+}
+.input-submit{
+    background: var(--yellow);
+    color: var(--black);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    text-transform:uppercase;
+}
+.input-submit:hover{
+    opacity:0.8;
+}
+.drink-card_list{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2rem;
+}
+.person{
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    text-align:left;
+    grid-gap: 1rem;
+    border: 0.1rem solid rgba(111,87,77,0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size:1.5rem;
+    color: var(--brightyellow); 
+}
+.person_thumbnail{
+    border-radius:50%;
+}
+@media screen and (min-width:768px){
+ .drink-card_list{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+ }
 .work-container{
     max-width: 90vw;
     margin: 2rem auto;
@@ -318,7 +405,6 @@ color: var(--black);
 .work-modal{
     display: none;
 }
-
 .work-modal--show{
     position: fixed;
     background:rgba(0,0,0,0.5);
@@ -387,10 +473,16 @@ color: var(--black);
     text-transform: uppercase;
     color: var(--grey);
 }
+@media screen and (min-width: 768px){
+    .contact-info{
+        grid-template-columns: repeat(3, 1fr);
+        order:-1;
+    }
+}    
 @media screen and (min-width: 992px){
     .contact-info{
-        grid-template-columns: repeat(1fr);
-        order:-0;
+        grid-template-columns: 1fr;
+        order:0;
     }
     .contact-container{
         display: grid;
@@ -400,5 +492,5 @@ color: var(--black);
       .contact-map{
           align-self:center;
       } 
-
-    }
+}
+}

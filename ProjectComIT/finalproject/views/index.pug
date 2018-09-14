@@ -1,7 +1,5 @@
 extends ./layout.pug
 block content
-.preloader
-  img.preloader_item(src='preloader.gif' alt='preloader')
 header#header.header
   .banner
     h1.banner_title.bell-fonts Coffee Junction
@@ -50,26 +48,20 @@ section#about.about.section-padding
       .section-title
         h1.section-title_name.bell-fonts Our Story
         .section-title_underline
-          p.section-title_text
-            | Proud to serve Canada&rsquo;s Favourite Coffee 
+        p.section-title_text
+          span
+            | Serve Canada&rsquo;s Favourite Coffee 
             b ORIGINAL BLEND
-            br
-            | A medium roast blend, expertly roasted with care to deliver a perfect balance and the unique Coffe Junctions taste that has made it Canada&apos;s Favourite Coffee.
-            br
-            | Based on #1 brewed coffee servings in Canadian QSR (The NPD Group/CREST&reg; for the year ending February 2018).
-      .about_img.about_img-special
+            | .A medium roast blend, expertly roasted with care to deliver a perfect balance and the unique Coffe Junctions taste that has made it Canada&apos;s Favourite Coffee.Based on #1 brewed coffee servings in Canadian QSR (The NPD Group/CREST&reg; for the year ending February 2018).
+      .about_img
         img.about_img-item(src='img/aboutImg-1.jpeg' alt='about_img')
     article.about-container
       .section-title
         h1.section-title_name.bell-fonts What We Do
         .section-title_underline
-          p.section-title_text
-            | We ethically source and carefully select our 100% Premium Arabica beans for peak freshness.
-            | We expertly blend and roast our beans to perfection.
-            | We freshly brew our coffee just for you.
-            | We serve every cup with care.
-            | We are proud to be
-            | Canada&rsquo;s Favourite Coffee.
+        p.section-title_text
+          span
+            | We ethically source and carefully select our 100% Premium Arabica beans for peak freshness.We expertly blend and roast our beans to perfection.We freshly brew our coffee just for you.We serve every cup with care.We are proud to be Canada&rsquo;s Favourite Coffee.
       .about_img.about_img-special
         img.about_img-item(src='img/aboutImg-2.jpeg' alt='about_img')
 section#drink.drink.section-padding
@@ -78,22 +70,23 @@ section#drink.drink.section-padding
       p.drink-form_feedback Would You Like to Have Coffee at no Cost?
       h3.drink-form_title.bell-fonts To Win Free Coffee
       .drink-form_input
-        input.input-name(type='text' name='' id='' maxlength='15')
+        input.input-name(type='text' name='' id='' maxlength='15' placeholder='name')
       .drink-form_input
-        input.input-lastname(type='text' name='' id='' maxlength='15')
+        input.input-lastname(type='text' name='' id='' maxlength='15' placeholder='lastname')
       .drink-form_input
-        input.input-submit(type='text' name='' id='' maxlength='15')
+        input.input-email(type='email' name='' id='' maxlength='15' placeholder='email')
+      input.input-submit(type='submit' name='' value='sign up')
     article.drink-card
       h3.drink-card_title.bell-fonts Lucky People
       .drink-card_list
         .person
           img.person_thumbnail(src='img/person-1.jpeg' alt='person')
-          h4.person_name john
-          h4.person_last-name doe
+          h4.person_name Chelsea
+          h4.person_last-name Nadiger
         .person
           img.person_thumbnail(src='img/person-2.jpeg' alt='person')
-          h4.person_name andrew
-          h4.person_last-name simair
+          h4.person_name Andrew
+          h4.person_last-name Simair
 section#work.work.section-padding
   .section-title.section-title--left
     h1.section-title_name.bell-fonts Our Work
@@ -141,10 +134,10 @@ section#work.work.section-padding
         i.fas.fa-window-close
 section#contact.contact.secton-padding
 .section-title.section-title--left
-  h1.section-title_name.bell-fonts Our Work
+  h1.section-title_name.bell-fonts Our Location
   .section-title_underline
 .contact-container
-  iframe.conatct-map(src="https://www.google.ca/maps/place/St.+Andrew's+College/@52.1290652,-106.6423719,15z/data=!4m5!3m4!1s0x0:0x7f6beef543f6a658!8m2!3d52.1290652!4d-106.6423719" width='100%' height='450' frameborder='0' style='border:0' allow='' fullscreen='')
+  iframe.conatct-map(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9797.155793824244!2d-106.6423719!3d52.1290652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f6beef543f6a658!2sSt.+Andrew's+College!5e0!3m2!1sen!2sca!4v1536951548038" width='100%' height='450' frameborder='0' style='border:0' allowfullscreen='')
 .contact-info
   .contact-item
     .contact.item_icon
