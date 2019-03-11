@@ -37,3 +37,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
     }); 
 app.use(express.static('public'));
 app.listen(3000);
+
+tomake ektu call kora jabe? kichu katha bolar chilo tomay. 
+ami tomake ja bolbo seta tumi kaauke bolona please
+ami jani je tumi khub valo meye. 

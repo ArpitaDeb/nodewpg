@@ -41,6 +41,5 @@ window.onload = function () {
         };
     }
     form.onsubmit=validation;
-
 }
   

@@ -6,7 +6,7 @@ app.set('view engine', 'pug');
 app.get('/', (req, res) => {
     res.render('index', { title: 'Hey', message: 'Hello there!' });
   });
-app.get('/reserve', (req, res) => {
+app.get('/Reservation', (req, res) => {
     res.render('form');
   });
   const MongoClient = require('mongodb').MongoClient;
@@ -28,7 +28,8 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
         console.log(req.body);
         const documents = { "username": username, "firstname": firstname, "lastname": lastname, "email": email, "subject": subject};
     collection.insertOne(documents, (err, result) => {
-      res.send(`We received the following details from your reservation request: ${firstname}, ${lastname}, ${email}, ${subject} & ${username}`);
+      res.send(`Congrats!Your Reservation is Confirmed!
+      We received the following details from your reservation request: ${firstname}, ${lastname}, ${email}, ${subject} & ${username}`);
         }); 
       });
     }); 

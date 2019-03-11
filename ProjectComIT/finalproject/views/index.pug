@@ -1,164 +1,167 @@
 extends ./layout.pug
 block content
-header#header.header
-  .banner
-    h1.banner_title.bell-fonts Coffee Junction
-    .banner_icons
-      a.banner_social-icon(href='#')
-        i.fab.fa-facebook.fa-fw
-      a.banner_social-icon(href='#')
-        i.fab.fa-twitter.fa-fw
-      a.banner_social-icon(href='#')
-        i.fab.fa-google-plus.fa-fw
-      a.banner_social-icon(href='#')
-        i.fab.fa-instagram.fa-fw
-  article.video_container
-    video.video_item(autoplay='' muted='' loop='')
-      source(src='video/Cup Of Coffee On Top Of Coffee Beans.mp4' type='video/mp4')
-      source(src='video/cofee1.ogv' type='video/ogv')
-      source(src='video/cofee2.webm' type='video/webm')
-      | your browser does not support video tag
-  .navBtn
-    i(clas='fas fa-bars')
-  nav.nav
-    ul.nav_links
-      li
-        a.nav_single-link.nav_logo(href='#')
-          img(src='img/navlogo.svg' alt='')
-      li
-        a.nav_single-link(href='#header') Home
-      li
-        a.nav_single-link(href='#about') About
-      li
-        a.nav_single-link(href='#drink') Free Drink
-      li
-        a.nav_single-link(href='#work') Work
-      li
-        a.nav_single-link(href='#contact') Contact
-      li
-        a.nav_single-link(href='#Reserve') Reservation
-  .video_switch-container
-    .video_switch
-      span on
-      span off
-      .video_switch-btn
-section#about.about.section-padding
-  .grid-container.grid-container--medium-2
-    article.about-container
-      .section-title
-        h1.section-title_name.bell-fonts Our Story
-        .section-title_underline
-        p.section-title_text
-          span
-            | Serve Canada&rsquo;s Favourite Coffee 
-            b ORIGINAL BLEND
-            | .A medium roast blend, expertly roasted with care to deliver a perfect balance and the unique Coffe Junctions taste that has made it Canada&apos;s Favourite Coffee.Based on #1 brewed coffee servings in Canadian QSR (The NPD Group/CREST&reg; for the year ending February 2018).
-      .about_img
-        img.about_img-item(src='img/aboutImg-1.jpeg' alt='about_img')
-    article.about-container
-      .section-title
-        h1.section-title_name.bell-fonts What We Do
-        .section-title_underline
-        p.section-title_text
-          span
-            | We ethically source and carefully select our 100% Premium Arabica beans for peak freshness.We expertly blend and roast our beans to perfection.We freshly brew our coffee just for you.We serve every cup with care.We are proud to be Canada&rsquo;s Favourite Coffee.
-      .about_img.about_img-special
-        img.about_img-item(src='img/aboutImg-2.jpeg' alt='about_img')
-section#drink.drink.section-padding
-  .grid-container
-    form.drink-form
-      p.drink-form_feedback Would You Like to Have Coffee at no Cost?
-      h3.drink-form_title.bell-fonts To Win Free Coffee
-      .drink-form_input
-        input.input-name(type='text' name='' id='' maxlength='15' placeholder='name')
-      .drink-form_input
-        input.input-lastname(type='text' name='' id='' maxlength='15' placeholder='lastname')
-      .drink-form_input
-        input.input-email(type='email' name='' id='' maxlength='15' placeholder='email')
-      input.input-submit(type='submit' name='' value='sign up')
-    article.drink-card
-      h3.drink-card_title.bell-fonts Lucky People
-      .drink-card_list
-        .person
-          img.person_thumbnail(src='img/person-1.jpeg' alt='person')
-          h4.person_name Chelsea
-          h4.person_last-name Nadiger
-        .person
-          img.person_thumbnail(src='img/person-2.jpeg' alt='person')
-          h4.person_name Andrew
-          h4.person_last-name Simair
-section#work.work.section-padding
+  .preloader
+  img.preloader_item(src='img/preloader.gif' alt='preloader')
+  header#header.header
+    .banner
+      h1.banner_title.bell-fonts Coffee Junction
+      .banner_icons
+        a.banner_social-icon(href='#')
+          i.fab.fa-facebook.fa-fw
+        a.banner_social-icon(href='#')
+          i.fab.fa-twitter.fa-fw
+        a.banner_social-icon(href='#')
+          i.fab.fa-google-plus.fa-fw
+        a.banner_social-icon(href='#')
+          i.fab.fa-instagram.fa-fw
+    article.video_container
+      video.video_item(autoplay='' muted='' loop='')
+        source(src='video/Cup Of Coffee On Top Of Coffee Beans.mp4' type='video/mp4')
+        source(src='video/cofee1.ogv' type='video/ogv')
+        source(src='video/cofee2.webm' type='video/webm')
+        | your browser does not support video tag
+    .navBtn
+      i(clas='fas fa-bars')
+    nav.nav
+      ul.nav_links
+        li
+          a.nav_single-link.nav_logo(href='#')
+            img(src='img/navlogo.svg' alt='')
+        li
+          a.nav_single-link(href='#header') Home
+        li
+          a.nav_single-link(href='#about') About
+        li
+          a.nav_single-link(href='#drink') Free Drink
+        li
+          a.nav_single-link(href='#work') Work
+        li
+          a.nav_single-link(href='#contact') Contact
+        li
+          a.nav_single-link(href='/Reservation') Reservation
+    .video_switch-container
+      .video_switch
+        span on
+        span off
+        .video_switch-btn
+  section#about.about.section-padding
+    .grid-container.grid-container--medium-2
+      article.about-container
+        .section-title
+          h1.section-title_name.bell-fonts Our Story
+          .section-title_underline
+          p.section-title_text
+            span
+              | Serve Canada&rsquo;s Favourite Coffee 
+              b ORIGINAL BLEND
+              | .A medium roast blend, expertly roasted with care to deliver a perfect balance and the unique Coffe Junctions taste that has made it Canada&apos;s Favourite Coffee.Based on #1 brewed coffee servings in Canadian QSR (The NPD Group/CREST&reg; for the year ending February 2018).
+        .about_img
+          img.about_img-item(src='img/aboutImg-1.jpeg' alt='about_img')
+      article.about-container
+        .section-title
+          h1.section-title_name.bell-fonts What We Do
+          .section-title_underline
+          p.section-title_text
+            span
+              | We ethically source and carefully select our 100% Premium Arabica beans for peak freshness.We expertly blend and roast our beans to perfection.We freshly brew our coffee just for you.We serve every cup with care.We are proud to be Canada&rsquo;s Favourite Coffee.
+        .about_img.about_img-special
+          img.about_img-item(src='img/aboutImg-2.jpeg' alt='about_img')
+  section#drink.drink.section-padding
+    .grid-container
+      form.drink-form
+        p.drink-form_feedback Would You Like to Have Coffee at no Cost?
+        h3.drink-form_title.bell-fonts To Win Free Coffee
+        .drink-form_input
+          input.input-name(type='text' name='' id='' maxlength='15' placeholder='name')
+        .drink-form_input
+          input.input-lastname(type='text' name='' id='' maxlength='15' placeholder='lastname')
+        .drink-form_input
+          input.input-email(type='email' name='' id='' maxlength='15' placeholder='email')
+        input.input-submit(type='submit' name='' value='sign up')
+      article.drink-card
+        h3.drink-card_title.bell-fonts Lucky People
+        .drink-card_list
+          .person
+            img.person_thumbnail(src='img/person-1.jpeg' alt='person')
+            h4.person_name Chelsea
+            h4.person_last-name Nadiger
+          .person
+            img.person_thumbnail(src='img/person-2.jpeg' alt='person')
+            h4.person_name Andrew
+            h4.person_last-name Simair
+  section#work.work.section-padding
+    .section-title.section-title--left
+      h1.section-title_name.bell-fonts Our Work
+      .section-title_underline
+    .work-container
+      article.work-item.item-1
+        img.work-item_img(src='img/work-1.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='1')
+          i.fas.fa-search
+      article.work-item.item-2
+        img.work-item_img(src='img/work-2.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='2')
+          i.fas.fa-search
+      article.work-item.item-3
+        img.work-item_img(src='img/work-3.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='3')
+          i.fas.fa-search
+      article.work-item.item-4
+        img.work-item_img(src='img/work-4.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='4')
+          i.fas.fa-search
+      article.work-item.item-5
+        img.work-item_img(src='img/work-5.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='5')
+          i.fas.fa-search
+      article.work-item.item-6
+        img.work-item_img(src='img/work-6.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='6')
+          i.fas.fa-search
+      article.work-item.item-7
+        img.work-item_img(src='img/work-7.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='7')
+          i.fas.fa-search
+      article.work-item.item-8
+        img.work-item_img(src='img/work-8.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='8')
+          i.fas.fa-search
+      article.work-item.item-9
+        img.work-item_img(src='img/work-9.jpeg' alt='')
+        a.work-item_icon(href='#' data-id='9')
+          i.fas.fa-search
+    .work-modal
+      .work-modal_item
+        .work-modal_close
+          i.fas.fa-window-close
+  section#contact.contact.secton-padding
   .section-title.section-title--left
-    h1.section-title_name.bell-fonts Our Work
+    #locationWrapper
+      h1.section-title_name.bell-fonts Our Location
     .section-title_underline
-  .work-container
-    article.work-item.item-1
-      img.work-item_img(src='img/work-1.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='1')
-        i.fas.fa-search
-    article.work-item.item-2
-      img.work-item_img(src='img/work-2.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='2')
-        i.fas.fa-search
-    article.work-item.item-3
-      img.work-item_img(src='img/work-3.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='3')
-        i.fas.fa-search
-    article.work-item.item-4
-      img.work-item_img(src='img/work-4.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='4')
-        i.fas.fa-search
-    article.work-item.item-5
-      img.work-item_img(src='img/work-5.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='5')
-        i.fas.fa-search
-    article.work-item.item-6
-      img.work-item_img(src='img/work-6.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='6')
-        i.fas.fa-search
-    article.work-item.item-7
-      img.work-item_img(src='img/work-7.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='7')
-        i.fas.fa-search
-    article.work-item.item-8
-      img.work-item_img(src='img/work-8.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='8')
-        i.fas.fa-search
-    article.work-item.item-9
-      img.work-item_img(src='img/work-9.jpeg' alt='')
-      a.work-item_icon(href='#' data-id='9')
-        i.fas.fa-search
-  .work-modal
-    .work-modal_item
-      .work-modal_close
-        i.fas.fa-window-close
-section#contact.contact.secton-padding
-.section-title.section-title--left
-  h1.section-title_name.bell-fonts Our Location
-  .section-title_underline
-.contact-container
-  iframe.conatct-map(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9797.155793824244!2d-106.6423719!3d52.1290652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f6beef543f6a658!2sSt.+Andrew's+College!5e0!3m2!1sen!2sca!4v1536951548038" width='100%' height='450' frameborder='0' style='border:0' allowfullscreen='')
-.contact-info
-  .contact-item
-    .contact.item_icon
-      i.fas.fa-map-pin
-    h2.contact-itam_title Address
-    p.contact-item_text 1121 College Drive, Saskatoon
-  .contact-item
-    .contact.item_icon
-      i.fas.fa-headphones-alt
-    h2.contact-itam_title Support
-    p.contact-item_text
-      span
-        i.fas.fa-phone
-      |                     +1(306)241-4180
-    p.contact-item_text
-      span
-        i.fas.fa-envelope
-      | arpitadeb1990@gmail.com
-  .contact-item
-    .contact.item_icon
-      i.fas.fa-clock
-    h2.contact-itam_title Working Hours
-    p.contact-item_text monday - friday 8a.m. to 8p.m.
-    p.contact-item_text saturday - sunday 9a.m. to 11p.m.
+  .contact-container
+    iframe.contact-map(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9797.155793824244!2d-106.6423719!3d52.1290652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f6beef543f6a658!2sSt.+Andrew's+College!5e0!3m2!1sen!2sca!4v1536951548038" width='100%' height='450' frameborder='0' style='border:0' allowfullscreen='')
+    .contact-info
+      .contact-item
+        .contact.item_icon
+          i.fas.fa-map-pin
+        h2.contact-itam_title Address
+        p.contact-item_text 1121 College Drive, Saskatoon
+      .contact-item
+        .contact.item_icon
+          i.fas.fa-headphones-alt
+        h2.contact-itam_title Support
+        p.contact-item_text
+          span
+            i.fas.fa-phone
+          |                     +1(306)241-4180
+        p.contact-item_text
+          span
+            i.fas.fa-envelope
+          | arpitadeb1990@gmail.com
+      .contact-item
+        .contact.item_icon
+          i.fas.fa-clock
+        h2.contact-itam_title Working Hours
+        p.contact-item_text monday - friday 8a.m. to 8p.m.
+        p.contact-item_text saturday - sunday 9a.m. to 11p.m.

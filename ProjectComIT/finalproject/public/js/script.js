@@ -3,7 +3,6 @@ function eventListeners(){
     const ui = new UI()
  window.addEventListener('load', function(){
  ui.hidePreloader();
-
  })
  document.querySelector('.navBtn').addEventListener('click',function(){
  ui.showNav();          
@@ -11,40 +10,6 @@ function eventListeners(){
  document.querySelector('.video_switch').addEventListener('click',function(){
      ui.videoControls()
  })
-}
-document.querySelector('.drink-form').addEventListener('submit',function(event){
-   event.preventDefault();
-   const name = document.querySelector('.input-name').value;
-   const lastName = document.querySelector('.input-lastname').value;
-   const email = document.querySelector('.input-email').value;
-
-   let value = ui.checkEmpty(name, lastName, email)
-   if(value){
-       let customer = new Customer(name, lastName, email)
-       console.log(customer);
-       ui.addCustomer(customer)
-ui.showFeedback('customer added to the list','success')
-ui.clearFields()   
-}
-   else{
-       ui.showFeedback('some form values empty','error')
-   }
-})
-const links= document.querySelectorAll('.work-item_icon');
-
-links.forEach(function(item){
-    item.addEventListener('click',function(event){
-ui.showModal(event)
-    })
-})
-//hide modal
-document.querySelector('.work-modal_close').addEventListener('click',function(){
-    ui.closeModal()
-})
-
-   
-function UI(){
-
 }
 UI.prototype.hidePreloader =function(){
     document.querySelector('.preloader').style.display = "none";
@@ -58,8 +23,7 @@ UI.prototype.videoControls=function(){
     if(!btn.classList.contains('btnSlide')){
         btn.classList.add('btnSlide')
         document.querySelector('.video_item').pause()
-                }
-        else{
+                }        else{
             btn.classList.remove('btnSlide')
             document.querySelector('.video_item').play()
         }
@@ -155,8 +119,6 @@ window.onload = function getInput() {
     }
 
     form.onsubmit = function (event) {
-       
-
         const username = form.elements[2];
         const password = form.elements[3]
         const mail = form.elements[4];
